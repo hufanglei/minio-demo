@@ -1,0 +1,19 @@
+server:
+  port: 8081
+minio:
+    endpoint: http://192.168.196.100/
+    port: 9000
+    accessKey: minioadmin
+    secretKey: minioadmin
+    bucketName: fsp-dev
+    secure: false
+spring:
+  servlet:
+    multipart:
+      max-file-size: 1500MB
+      max-request-size: 1500MB
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/minio?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    username: root
+    password: root
